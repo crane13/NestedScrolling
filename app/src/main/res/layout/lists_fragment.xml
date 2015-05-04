@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<me.chenbiao.nestedscrolling.OverlappingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lists_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true">
+
+    <ListView
+        android:id="@+id/shortcut_card_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/actionbar_background_color"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:fadingEdge="none"
+        android:paddingTop="@dimen/action_bar_height_large" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <me.chenbiao.nestedscrolling.ViewPagerTabs
+                android:id="@+id/lists_pager_header"
+                style="@style/ActionBarTabTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/tab_height"
+                android:layout_gravity="top"
+                android:elevation="@dimen/tab_elevation"
+                android:orientation="horizontal"
+                android:textAllCaps="true" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/lists_pager"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </FrameLayout>
+</me.chenbiao.nestedscrolling.OverlappingPaneLayout>
